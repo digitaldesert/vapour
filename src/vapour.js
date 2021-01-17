@@ -14,7 +14,25 @@ let Vapour = {
 
 // Lets start
 (function ( win, doc, vpr, undef ){
-    // Lets start by fetching the context data of the view
-    alert( 'You need to pull: ' + vpr.getDataURL(window.location));
+    let observer = new MutationObserver(mutations => {
+
+      for(let mutation of mutations) {
+        // examine new nodes, is there anything to highlight?
+
+        for(let node of mutation.addedNodes) {
+          // we track only elements, skip other nodes (e.g. text nodes)
+          if (!(node instanceof HTMLElement)) continue;
+
+          // check the inserted element for being a code snippet
+          if (node.tagName.toLowerCase().startsWith('vpr-')) {
+            console.log(node);
+          }
+
+        }
+      }
+
+});
+
+observer.observe( doc.documentElement || doc.body, {childList: true, subtree: true});
 
 })( window, document, Vapour);
