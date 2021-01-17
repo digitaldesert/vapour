@@ -16,8 +16,8 @@ dealing with everything else (e.g., Python, Ruby, PHP, Java ) and generally ther
 they are also responsible for servers and deployments to a more prominent degree than the frontend developers.
 
 ### Frontend is our focus
-While most backend developers can tinker and can navigate around frontend centric frameworks, they have leverage already
-couple programming frameworks that are already coupled with a frontend stack, so they can focus on building services. 
+While most backend developers can tinker and can navigate around frontend frameworks, they usually have to leverage already
+built in frontend stacks that come with their backend framework, so they can focus on building services. 
 For the most part this is sufficient, and many successful projects I have seen are married to a robust stack were little
 no frontend code was ever required.
 
